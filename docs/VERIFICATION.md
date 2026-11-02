@@ -12,8 +12,8 @@
 | **Phase 1** | Automated Unit Tests | `pytest tests/` | 10/10 tests passed; flake8 clean | Verified |
 | **Phase 2** | Local Streamlit App (UI) | `streamlit run streamlit_app.py` or `python app.py` | UI with applicant presets, underwriting, explainability & health endpoint (HTTP 200) | Verified |
 | **Phase 2** | Metrics Instrumentation | `curl http://localhost:8000/metrics` | Prometheus exporter running on port 8000; telemetry for predictions, latency, CIBIL, & amounts | Verified |
-| **Phase 3** | Git Init & Secret Hygiene | `git status` / `git log` | Not Run | Not Run |
-| **Phase 3** | GitHub Repository Connected | `git remote -v` | Not Run | Not Run |
+| **Phase 3** | Git Init & Secret Hygiene | `git status` / `git log` | Git initialized on `main`; comprehensive `.gitignore`; secret audit confirmed clean | Verified |
+| **Phase 3** | GitHub Repository Connected | `git remote -v` | Pending user GitHub repository URL | In Progress |
 | **Phase 4** | Docker Image Build | `docker build -t loan-approval-mlops .` | Not Run | Not Run |
 | **Phase 4** | Docker Health & Metrics Check | `/_stcore/health` and `:8000/metrics` | Not Run | Not Run |
 | **Phase 4** | Tag & GHCR Preparation | `docker images` | Not Run | Not Run |
