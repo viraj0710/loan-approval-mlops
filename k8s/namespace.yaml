@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: loan-app
+  labels:
+    name: loan-app
+    app.kubernetes.io/part-of: loan-approval-system
+
