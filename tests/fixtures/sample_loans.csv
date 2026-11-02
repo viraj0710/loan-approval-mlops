@@ -9,3 +9,4 @@ no_of_dependents,education,self_employed,income_annum,loan_amount,loan_term,cibi
 1,Not Graduate,No,3200000,9600000,10,480,1800000,1200000,6000000,2100000,Rejected
 5,Graduate,No,6200000,18000000,8,710,3200000,2500000,14000000,5200000,Approved
 0,Not Graduate,Yes,1500000,5000000,16,410,900000,400000,3000000,1100000,Rejected
+
