@@ -14,9 +14,9 @@
 | **Phase 2** | Metrics Instrumentation | `curl http://localhost:8000/metrics` | Prometheus exporter running on port 8000; telemetry for predictions, latency, CIBIL, & amounts | Verified |
 | **Phase 3** | Git Init & Secret Hygiene | `git status` / `git log` | Git initialized on `main`; comprehensive `.gitignore`; secret audit confirmed clean | Verified |
 | **Phase 3** | GitHub Repository Connected | `git remote -v` & `git push` | Connected to `https://github.com/viraj0710/loan-approval-mlops.git`; branch `main` tracking and pushed | Verified |
-| **Phase 4** | Docker Image Build | `docker build -t loan-approval-mlops .` | Not Run | Not Run |
-| **Phase 4** | Docker Health & Metrics Check | `/_stcore/health` and `:8000/metrics` | Not Run | Not Run |
-| **Phase 4** | Tag & GHCR Preparation | `docker images` | Not Run | Not Run |
+| **Phase 4** | Docker Image Build | `docker build -t loan-approval-mlops .` | Multi-port container image built (`python:3.12-slim`, non-root `appuser`) | Verified |
+| **Phase 4** | Docker Health & Metrics Check | `/_stcore/health` and `:8000/metrics` | Container passed `HEALTHCHECK` (status: `healthy`), `8501/_stcore/health` (200), `8000/metrics` (200) | Verified |
+| **Phase 4** | Tag & GHCR Preparation | `docker images` | Tagged as `ghcr.io/viraj0710/loan-approval-mlops:latest` and `:v1.0.0` | Verified |
 | **Phase 5** | GitHub Actions Workflow | `.github/workflows/ci-cd.yml` | Not Run | Not Run |
 | **Phase 5** | Green CI/CD Run | GitHub Actions run status | Not Run | Not Run |
 | **Phase 6** | Minikube App Deployment | `kubectl get pods -n loan-app` | Not Run | Not Run |

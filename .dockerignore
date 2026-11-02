@@ -1,0 +1,49 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache & compiled bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Git & CI/CD configs
+.git/
+.github/
+
+# Development, tests, notebooks
+tests/
+notebooks/
+docs/
+scripts/
+.pytest_cache/
+.flake8
+.coverage
+htmlcov/
+
+# Raw dataset files
+data/raw/*
+!data/raw/.gitkeep
+
+# Cloud & Infra configs
+terraform/
+k8s/
+monitoring/
+
+# Secrets & local IDE files
+.env
+.env.*
+*.pem
+*.key
+kaggle.json
+*.tfvars
+*.tfvars.json
+*.tfstate
+*.tfstate.*
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
