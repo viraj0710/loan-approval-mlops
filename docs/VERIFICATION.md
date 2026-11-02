@@ -18,7 +18,7 @@
 | **Phase 4** | Docker Health & Metrics Check | `/_stcore/health` and `:8000/metrics` | Container passed `HEALTHCHECK` (status: `healthy`), `8501/_stcore/health` (200), `8000/metrics` (200) | Verified |
 | **Phase 4** | Tag & GHCR Preparation | `docker images` | Tagged as `ghcr.io/viraj0710/loan-approval-mlops:latest` and `:v1.0.0` | Verified |
 | **Phase 5** | GitHub Actions Workflow | `.github/workflows/ci-cd.yml` | Multi-stage pipeline: Flake8 linting, Pytest suite, Buildx GHCR publish, and container smoke test | Verified |
-| **Phase 5** | Green CI/CD Run | GitHub Actions run status | Not Run | Not Run |
+| **Phase 5** | Green CI/CD Run | GitHub Actions run status | Run ID 41428805001 concluded with success (Lint, Test, Build, Push, Smoke Test green) | Verified |
 | **Phase 6** | Minikube App Deployment | `kubectl get pods -n loan-app` | Not Run | Not Run |
 | **Phase 6** | Pod Recovery & Scaling | `kubectl scale ...` & pod recovery | Not Run | Not Run |
 | **Phase 7** | Terraform Init, Plan & Apply | `terraform apply` | Not Run | Not Run |
