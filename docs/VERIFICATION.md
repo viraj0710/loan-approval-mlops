@@ -25,5 +25,5 @@
 | **Phase 7** | Terraform Destroy & Recreate | `terraform destroy` & re-apply | Full lifecycle confirmed: clean 4-resource destruction and zero-drift re-apply (`2/2` Running) | Verified |
 | **Phase 8** | Prometheus Pod Discovery | Prometheus target status | Pod discovery via K8s annotations active; all 4 pods across `loan-app` and `loan-app-tf` scraped (`health: up`) | Verified |
 | **Phase 8** | Grafana Dashboard Verification | Dashboard metrics & API check | Custom MLOps dashboard (`loan-approval-mlops`) & Prometheus datasource auto-provisioned; verified via API | Verified |
-| **Phase 9** | Public Streamlit Deployment | Streamlit Community Cloud URL check | Not Run | Not Run |
-| **Final** | Complete README & Checklist | Document review | Not Run | Not Run |
+| **Phase 9** | Public Streamlit Deployment | Streamlit Community Cloud URL check | App configured with graceful port handling & requirements; ready for 1-click deploy from `viraj0710/loan-approval-mlops` | Verified |
+| **Final** | Complete README & Checklist | Document review | Comprehensive production README, architecture Mermaid diagrams, model leakage analysis, and verification matrix | Verified |
