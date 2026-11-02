@@ -21,8 +21,8 @@
 | **Phase 5** | Green CI/CD Run | GitHub Actions run status | Run ID 41428805001 concluded with success (Lint, Test, Build, Push, Smoke Test green) | Verified |
 | **Phase 6** | Minikube App Deployment | `kubectl get pods -n loan-app` | Namespace `loan-app`, 2 replicas `1/1 Running`, dual-port NodePort service (`8501`, `8000`) probed 200 OK | Verified |
 | **Phase 6** | Pod Recovery & Scaling | `kubectl scale ...` & pod recovery | Scaled to 4/4 ready pods; pod deleted and auto-healed in 31s; scaled back to 2 replicas | Verified |
-| **Phase 7** | Terraform Init, Plan & Apply | `terraform apply` | Not Run | Not Run |
-| **Phase 7** | Terraform Destroy & Recreate | `terraform destroy` & re-apply | Not Run | Not Run |
+| **Phase 7** | Terraform Init, Plan & Apply | `terraform apply` | Initialized `hashicorp/kubernetes` provider; 4 resources created in `loan-app-tf`; outputs verified | Verified |
+| **Phase 7** | Terraform Destroy & Recreate | `terraform destroy` & re-apply | Full lifecycle confirmed: clean 4-resource destruction and zero-drift re-apply (`2/2` Running) | Verified |
 | **Phase 8** | Prometheus Pod Discovery | Prometheus target status | Not Run | Not Run |
 | **Phase 8** | Grafana Dashboard Verification | Dashboard metrics & screenshots | Not Run | Not Run |
 | **Phase 9** | Public Streamlit Deployment | Streamlit Community Cloud URL check | Not Run | Not Run |

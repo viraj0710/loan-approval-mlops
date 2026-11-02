@@ -1,0 +1,9 @@
+# Sample Terraform variable overrides for Minikube
+kube_config_path   = "~/.kube/config"
+kube_context       = "minikube"
+namespace          = "loan-app-tf"
+app_name           = "loan-approval-app"
+container_image    = "loan-approval-mlops:latest"
+replicas           = 2
+node_port_ui       = 30510
+node_port_metrics  = 30810
