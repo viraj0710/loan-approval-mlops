@@ -1,5 +1,7 @@
-import requests
+"""Utility script to monitor GitHub Actions CI runs."""
 import time
+import requests
+
 
 def check_status():
     url = "https://api.github.com/repos/viraj0710/loan-approval-mlops/actions/runs"
@@ -22,7 +24,10 @@ def check_status():
             conclusion = latest.get("conclusion")
             name = latest.get("name")
             html_url = latest.get("html_url")
-            print(f"[Attempt {attempt+1}] Run: {name} | Status: {status} | Conclusion: {conclusion} | URL: {html_url}")
+            print(
+                f"[Attempt {attempt+1}] Run: {name} | Status: {status} | "
+                f"Conclusion: {conclusion} | URL: {html_url}"
+            )
 
             if status == "completed":
                 print(f"Workflow finished with conclusion: {conclusion}")
@@ -32,6 +37,6 @@ def check_status():
         time.sleep(10)
     return False
 
+
 if __name__ == "__main__":
     check_status()
-
