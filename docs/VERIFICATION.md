@@ -18,7 +18,7 @@
 | **Phase 4** | Docker Health & Metrics Check | `/_stcore/health` and `:8000/metrics` | Container passed `HEALTHCHECK` (status: `healthy`), `8501/_stcore/health` (200), `8000/metrics` (200) | Verified |
 | **Phase 4** | Tag & GHCR Preparation | `docker images` | Tagged as `ghcr.io/viraj0710/loan-approval-mlops:latest` and `:v1.0.0` | Verified |
 | **Phase 5** | GitHub Actions Workflow | `.github/workflows/ci-cd.yml` | Multi-stage pipeline: Flake8 linting, Pytest suite, Buildx GHCR publish, and container smoke test | Verified |
-| **Phase 5** | Green CI/CD Run | GitHub Actions run status | Run ID 41428805001 concluded with success (Lint, Test, Build, Push, Smoke Test green) | Verified |
+| **Phase 5** | Green CI/CD Run | GitHub Actions run status | Run IDs 41428805001 & 41435495306 succeeded (Lint, Test, Build, Push, Smoke Test green) | Verified |
 | **Phase 6** | Minikube App Deployment | `kubectl get pods -n loan-app` | Namespace `loan-app`, 2 replicas `1/1 Running`, dual-port NodePort service (`8501`, `8000`) probed 200 OK | Verified |
 | **Phase 6** | Pod Recovery & Scaling | `kubectl scale ...` & pod recovery | Scaled to 4/4 ready pods; pod deleted and auto-healed in 31s; scaled back to 2 replicas | Verified |
 | **Phase 7** | Terraform Init, Plan & Apply | `terraform apply` | Initialized `hashicorp/kubernetes` provider; 4 resources created in `loan-app-tf`; outputs verified | Verified |
