@@ -1,0 +1,49 @@
+# Python & Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook checkpoints & local runtime data
+.ipynb_checkpoints/
+.jupyter/
+.jupyter_data/
+.ipython/
+
+# Raw and local dataset files (NEVER commit raw data or Kaggle downloads)
+data/raw/*
+!data/raw/.gitkeep
+
+# Sensitive files, keys, and tokens
+.env
+.env.*
+*.pem
+*.key
+kaggle.json
+*.tfvars
+*.tfvars.json
+
+# Terraform state & cache
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Streamlit local state
+.streamlit/secrets.toml
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Pytest / coverage cache
+.pytest_cache/
+.coverage
+htmlcov/

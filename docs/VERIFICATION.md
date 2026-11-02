@@ -1,0 +1,29 @@
+# Project Verification Tracking
+
+| Phase | Deliverable | Command / Verification Check | Result / Evidence | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **Prerequisites** | Minikube Installation | `minikube version` | minikube v1.39.0 installed | Verified |
+| **Prerequisites** | Python Virtual Environment | `python -V` in `.venv` | Python 3.12.1 + pinned deps in requirements-dev.txt | Verified |
+| **Phase 1** | Raw Dataset Ingestion | `python scripts/download_data.py` | 4,269 rows raw dataset ingested into data/raw/ | Verified |
+| **Phase 1** | Exploratory Data Analysis | `notebooks/01_eda.ipynb` executed | Cleaned whitespace, class balance & CIBIL leak documented | Verified |
+| **Phase 1** | ML Pipeline & Leakage Check | `python -m src.train` | Trained LR & RF; RF chosen (F1: 0.9822, AUC: 0.9964) | Verified |
+| **Phase 1** | Metrics Artifact | Check `models/metrics.json` | JSON verified with metrics, confusion matrix & leakage notes | Verified |
+| **Phase 1** | Trained Model Artifact | Check `models/loan_model.joblib` | Committed scikit-learn pipeline saved | Verified |
+| **Phase 1** | Automated Unit Tests | `pytest tests/` | 10/10 tests passed; flake8 clean | Verified |
+| **Phase 2** | Local Streamlit App (UI) | `streamlit run streamlit_app.py` | Not Run | Not Run |
+| **Phase 2** | Metrics Instrumentation | `curl http://localhost:8000/metrics` | Not Run | Not Run |
+| **Phase 3** | Git Init & Secret Hygiene | `git status` / `git log` | Not Run | Not Run |
+| **Phase 3** | GitHub Repository Connected | `git remote -v` | Not Run | Not Run |
+| **Phase 4** | Docker Image Build | `docker build -t loan-approval-mlops .` | Not Run | Not Run |
+| **Phase 4** | Docker Health & Metrics Check | `/_stcore/health` and `:8000/metrics` | Not Run | Not Run |
+| **Phase 4** | Tag & GHCR Preparation | `docker images` | Not Run | Not Run |
+| **Phase 5** | GitHub Actions Workflow | `.github/workflows/ci-cd.yml` | Not Run | Not Run |
+| **Phase 5** | Green CI/CD Run | GitHub Actions run status | Not Run | Not Run |
+| **Phase 6** | Minikube App Deployment | `kubectl get pods -n loan-app` | Not Run | Not Run |
+| **Phase 6** | Pod Recovery & Scaling | `kubectl scale ...` & pod recovery | Not Run | Not Run |
+| **Phase 7** | Terraform Init, Plan & Apply | `terraform apply` | Not Run | Not Run |
+| **Phase 7** | Terraform Destroy & Recreate | `terraform destroy` & re-apply | Not Run | Not Run |
+| **Phase 8** | Prometheus Pod Discovery | Prometheus target status | Not Run | Not Run |
+| **Phase 8** | Grafana Dashboard Verification | Dashboard metrics & screenshots | Not Run | Not Run |
+| **Phase 9** | Public Streamlit Deployment | Streamlit Community Cloud URL check | Not Run | Not Run |
+| **Final** | Complete README & Checklist | Document review | Not Run | Not Run |
