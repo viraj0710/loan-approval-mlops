@@ -23,7 +23,7 @@
 | **Phase 6** | Pod Recovery & Scaling | `kubectl scale ...` & pod recovery | Scaled to 4/4 ready pods; pod deleted and auto-healed in 31s; scaled back to 2 replicas | Verified |
 | **Phase 7** | Terraform Init, Plan & Apply | `terraform apply` | Initialized `hashicorp/kubernetes` provider; 4 resources created in `loan-app-tf`; outputs verified | Verified |
 | **Phase 7** | Terraform Destroy & Recreate | `terraform destroy` & re-apply | Full lifecycle confirmed: clean 4-resource destruction and zero-drift re-apply (`2/2` Running) | Verified |
-| **Phase 8** | Prometheus Pod Discovery | Prometheus target status | Not Run | Not Run |
-| **Phase 8** | Grafana Dashboard Verification | Dashboard metrics & screenshots | Not Run | Not Run |
+| **Phase 8** | Prometheus Pod Discovery | Prometheus target status | Pod discovery via K8s annotations active; all 4 pods across `loan-app` and `loan-app-tf` scraped (`health: up`) | Verified |
+| **Phase 8** | Grafana Dashboard Verification | Dashboard metrics & API check | Custom MLOps dashboard (`loan-approval-mlops`) & Prometheus datasource auto-provisioned; verified via API | Verified |
 | **Phase 9** | Public Streamlit Deployment | Streamlit Community Cloud URL check | Not Run | Not Run |
 | **Final** | Complete README & Checklist | Document review | Not Run | Not Run |
