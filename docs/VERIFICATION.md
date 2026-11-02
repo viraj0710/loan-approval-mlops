@@ -17,7 +17,7 @@
 | **Phase 4** | Docker Image Build | `docker build -t loan-approval-mlops .` | Multi-port container image built (`python:3.12-slim`, non-root `appuser`) | Verified |
 | **Phase 4** | Docker Health & Metrics Check | `/_stcore/health` and `:8000/metrics` | Container passed `HEALTHCHECK` (status: `healthy`), `8501/_stcore/health` (200), `8000/metrics` (200) | Verified |
 | **Phase 4** | Tag & GHCR Preparation | `docker images` | Tagged as `ghcr.io/viraj0710/loan-approval-mlops:latest` and `:v1.0.0` | Verified |
-| **Phase 5** | GitHub Actions Workflow | `.github/workflows/ci-cd.yml` | Not Run | Not Run |
+| **Phase 5** | GitHub Actions Workflow | `.github/workflows/ci-cd.yml` | Multi-stage pipeline: Flake8 linting, Pytest suite, Buildx GHCR publish, and container smoke test | Verified |
 | **Phase 5** | Green CI/CD Run | GitHub Actions run status | Not Run | Not Run |
 | **Phase 6** | Minikube App Deployment | `kubectl get pods -n loan-app` | Not Run | Not Run |
 | **Phase 6** | Pod Recovery & Scaling | `kubectl scale ...` & pod recovery | Not Run | Not Run |
