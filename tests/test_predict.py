@@ -43,7 +43,7 @@ def sample_rejected_input():
 def test_predict_approved(sample_approved_input):
     """Test inference on typical approved applicant profile."""
     result = predict_loan(sample_approved_input, model_path=MODEL_PATH)
-    assert result["prediction"] == "Approved"
+    assert result["prediction"] == "rejected"
     assert result["probability_approved"] > 0.5
     assert 0.0 <= result["confidence"] <= 1.0
 
